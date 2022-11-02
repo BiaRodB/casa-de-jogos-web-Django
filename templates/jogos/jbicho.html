@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top tex-light">
+  <div class="container bg-dark">
+    <a class="navbar-brand" href="{% url 'home'%} ">
+      VOLTAR
+    </a>
+    <a class="navbar-brand" href="{% url 'jogo_bicho' %}" >APOSTAR</a>
+    <a class="navbar-brand" href="{% url 'listarb' %}" >VER APOSTAR</a>
+  
+    <div class="float-right">
+    <div class="float-right  bg-light mb-1 h4"> USUARIO: {{user}} </div>
+   
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+<main class="my-1 ">
+  <div class="container">
+    <!--Grid row-->
+    <div class="row">
+      <br><br>
+      <!--Grid column-->
+      <div class="col-md-11 mb-3">
+        <div class="row gy-4">
+         
+            <div class="col-4">
+              <br><br>
+              <img lass="p-3 border bg-warning h4" src="static/imagens/jo.jpeg" alt="..." width="600px" height="400px">
+              
+              </div>
+     
+     
+
+ <h3 class="text-dark"> Jogo do Bicho </h3>
+ <form action="" method="POST">
+  <div class="mb-3 text-dark" >
+  {% csrf_token %}
+  {{ form.as_p }}
+ 
+<button type="submit" class="btn btn-success" >Criar</button>
+    <br>
+    <br>
+    <hr>
+ 
+
+    <br>
+<p class=" mb-1 h4">
+    <h4 class="text-dark">SUAS APOSTAS : {{user}} </h4><br>
+    
+    {% for bicho in bichos %}
+        
+    <!--<p class=" p-3 mb-1 bg-success text-white mb-3 h4"> {{bicho.numero_bicho}} </p>-->
+    <div class="container overflow-hidden text-center">
+    <div class="col-2">
+      <div class="p-3 border bg-success text-dark h4">{{bicho.numero_bicho}} </div>
+    </div>
+  </div>
+    <br>   
+    {% endfor %}
+</p>
+<hr>
+
+
+ 
+
+    <br>   
+  
+    
+</div>
+
+
+{% endblock %}

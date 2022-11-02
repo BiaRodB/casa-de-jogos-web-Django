@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark static-top tex-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home'%} ">
+        VOLTAR
+      </a>
+      <a class="navbar-brand" href="{% url 'mega_sena' %}" >MEGA</a>
+      <a class="navbar-brand" href="{% url 'Sbicho' %}" >JOGO DO BICHO</a>
+      <div class="float-right">
+      <div class="float-right  text-light mb-2 h4"> USUARIO: {{user}} </div>
+     
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-md-19 mb-3">
+
+  <center><h3 class="text-dark"> Jogo do Bicho </h3>
+
+  <h3 class="text-dark">  <script language=javascript type="text/javascript">
+    now = new Date
+    document.write ("RESULTADOS   DO DIA "  + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear() )
+    </script></h3><br></center>
+    
+     <!--  <p class="p-3 mb-2 bg-warning h4"> RESULTADO 1: {{formB}}</p>
+       <p class="p-3 mb-2 bg-warning h4">RESULTADO 2:  {{formB1}}</p>
+       <p class="p-3 mb-2 bg-warning h4">RESULTADO 3:  {{formB2}}</p>
+       <p class="p-3 mb-2 bg-warning h4">RESULTADO 4:  {{formB3}}</p>
+       <p class="p-3 mb-2 bg-warning h4">RESULTADO 5:  {{formB4}}</p> -->
+  
+       <div class="container overflow-hidden text-center">
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-19 mb-3">
+    
+            <!--<a href ="{% url 'Sbicho'%}">sortear</a>-->
+          
+          <!--<div class="p-3 border bg-warning h5">primeiro:  {{list}}</div>
+          </div> -->
+          
+          
+          <!--{% for Rbicho in sorteio %}
+        
+    <p class=" p-3 mb-1 bg-success text-white mb-3 h4"> {{bicho.numero_bicho}} </p>
+    <div class="container overflow-hidden text-center">
+    <div class="col-2">
+      <div class="p-3 border bg-success text-dark h4">{{Rbicho.resultado1}} </div>
+    </div>
+  </div>
+    <br>   
+    {% endfor %} -->
+    <center><h3 class="text-dark"> JOGO DO BICHO </h3></center>
+    
+         <!--<p class="p-3 mb-2 bg-warning h4"> {{formS}}</p>--> 
+         <div class="col-30" >
+          <div class="p-30 border bg-warning  h4">{{listaf}} </div>
+        
+        </div>
+          
+          
+          
+          
+          
+          
+          <!--<div class="col-4">
+            <div class="p-3 border bg-warning h5"> segundo:  {{formB1}}</div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 border bg-warning h5">terceiro:    {{formB2}}</div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 border bg-warning h5">quarto:   {{formB3}}</div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 border bg-warning h5">quinto:   {{formB4}}</div>
+          </div>
+        </div>
+      </div><br>-->
+
+<hr>
+
+
+<center><h3 class="text-dark"> MEGA SENA </h3></center>
+
+     
+         <!--<p class="p-3 mb-2 bg-warning h4"> {{formS}}</p>--> 
+         <div class="col-4" >
+          <div class="p-3 border bg-warning  h4">{{formS}} </div>
+          <!--<div class="p-3 border bg-warning  h4">{{result}} </div>-->
+        </div>
+         
+         <div class="col-sm-10">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-danger">ATENÇÃO</h5>
+              <p class="card-text">todos os resultados de jogos são divulgados  exclusivamente as 20:00 Hrs</p>
+              
+            </div>
+
+
+
+
+
+  
+{% endblock %}

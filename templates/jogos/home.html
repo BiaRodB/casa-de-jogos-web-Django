@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      
+       
+   
+    </head>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary static-top">
+      <div class="container">
+        <a class="navbar-brand h4" href="{% url 'logaut_user'%} ">
+          SAIR
+        </a>
+        
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+      <!--Main Navigation-->
+  <header>
+  
+
+    <!-- Navbar -->
+
+     
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div id="intro" class="p-1 text-center bg-dark  text-light">
+      <h1 class="mb-1 h2">APOSTA CERTA</h1>
+      <p class="mb-3">A CASA DE APOSTA DO BRASILEIRO</p>
+      <a type="button" class="btn btn-success text-light" href="{% url 'carteira'%}">CARTEIRA</a>
+     
+    </div>
+    <!-- Jumbotron -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="my-2 bg-secondary text-light">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-9 mb-4">
+          <!--Section: Content-->
+          <section>
+
+            <hr>
+            <!-- Post -->
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="bg-image hover-overlay shadow-1-strong rounded ripple" data-mdb-ripple-color="light">
+                  <img src="https://img.olhardigital.com.br/wp-content/uploads/2022/10/mega-sena-1.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-8 mb-4">
+                <h5>MEGA-SENA</h5>
+                <p>
+                  APOSTE E GANHE MUITO DINHEIRO 
+                </p>
+
+                <a type="button" class="btn btn-success text-light" href="{% url 'apostar'%}">APOSTAR</a>
+              </div>
+            </div>
+<hr>
+            <!-- Post -->
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="bg-image hover-overlay shadow-1-strong rounded ripple" data-mdb-ripple-color="light">
+                  <img src="https://www.apostasesportivasbonus.com/wp-content/uploads/sites/4/2021/12/Jogo-Do-Bicho.png" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-8 mb-4">
+                <h5>JOGO DO BICHO</h5>
+                <p>
+                  DOBRE SUAS CHANCES DE GANHAR , APOSTE E GANHE MUITO DINHEIRO
+                </p>
+
+                <a href="jogo_bicho" type="button" class="btn btn-success text-light">APOSTAR</a>
+              </div>
+            </div>
+            <hr>
+
+            <!-- Post -->
+         
+
+            <!-- Post -->
+            
+          <!--Section: Content-->
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 mb-4">
+          <!--Section: Sidebar-->
+          <section class="sticky-top" style="top: 80px;">
+            <!--Section: Ad-->
+            <section class="text-center border-bottom pb-4 mb-4">
+              <div class="bg-image hover-overlay ripple mb-4">
+                <img
+                  src="https://economia.culturamix.com/blog/wp-content/uploads/2019/05/Como-Investir-Dinheiro-6.png"
+                  class="img-fluid"  width="550px" />
+                <a href="/" target="_blank">
+                  <div class="mask" style="background-color: rgba( 169, 169, 169, 1 );"></div>
+                </a>
+              </div>
+              <h5>RESULTADOS DO DIA</h5>
+
+              <a role="button" class="btn btn-success text-light" href="perfil"
+                >IR<i class="fas fa-download ms-2"></i></a>
+            </section>
+            <!--Section: Ad-->
+
+            <!--Section: Video-->
+         
+            <!--Section: Video-->
+          </section>
+          <!--Section: Sidebar-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+      <!-- Pagination -->
+     
+  <!--Main layout-->
+
+  <!--Footer-->
+
+
+  <!--Footer-->
+    <!-- MDB -->
+    {% endblock content %}

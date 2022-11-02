@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-light static-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home'%} ">
+      VOLTAR
+    </a>
+    <a class="navbar-brand" href="{% url 'depositar' %}" >DEPOSITAR</a>
+    <a class="navbar-brand" href="{% url 'depositar' %}" >SACAR</a>
+    <div class="float-right">
+    <div class="float-right  text-light mb-1 h4"> USUARIO: {{user}} </div>
+   
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+
+
+<div class="container mt-5 bg-secondary">
+      
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+          <div class="card px-1 py-1" id="form1">
+          
+            <div class="card">
+              <center>
+
+                <img class="card-img-top" src="https://img.freepik.com/vetores-gratis/ilustracao-realista-brasileira-real_52683-77941.jpg?size=626&ext=jpg&ga=GA1.2.1149138098.1665942730" alt="Imagem de capa do card">
+             
+                <div class="card-body">
+                  <h5 class="card-title">SALDO</h5>
+                  {%for saldos in saldos %}
+                  <p class="p-3 mb-2 h5 ">{{saldos}}</p>
+                  {% endfor %}
+                  <p>
+                    <form action="" method="POST">
+                      <div class="mb-3" >
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                     
+                      <button type="submit" class="btn btn-success" >DEPOSITAR</button>
+                    </div>
+                    </form>
+                
+
+                  <h5>LEIA O QRCODE</h5>
+                  <!--https://api.qrserver.com/v1/create-qr-code/?data=https://acervolima.com/gerador-de-codigo-qr-usando-html-css-e-jquery/&size=150x150-->
+                   <img src="static/imagens/qr.jpeg" width="250px" >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

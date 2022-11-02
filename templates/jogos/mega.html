@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home'%} ">
+      VOLTAR
+    </a>
+    
+ 
+    <a class="navbar-brand" href="{% url 'apostar' %}" >APOSTAR</a>
+    <a class="navbar-brand" href="{% url 'listar' %}" >VER APOSTAR</a>
+
+    <div class="float-right">
+    <div class="float-right  bg-light mb-2 h3"> USUARIO: {{user}} </div>
+    
+   
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+<main class="my-1">
+  <div class="container">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-md-19 mb-3">
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+ <h3> mega </h3>
+ <form action="" method="POST">
+  <div class="mb-3" >
+  {% csrf_token %}
+  {{ form.as_p }}
+ 
+<button type="submit" class="btn btn-success" >Criar</button>
+</div>
+</form>
+    <br>
+    <br>
+    <hr>
+ 
+
+    <br>
+<p class=" mb-1 h4">
+    <h4>SUAS APOSTAS : {{user}} </h4><br>
+    
+    {% for mega in megas %}
+        
+   <!-- <p class=" p-3 mb-1 bg-success text-white mb-3 h4"> {{mega.numero}} </p>-->
+    <div class="container overflow-hidden text-center">
+      <div class="col-4">
+        <div class="p-3 border bg-success text-white h4">{{mega.numero}} </div>
+      </div>
+    </div>
+    <br>   
+    {% endfor %}
+</p>
+<hr>
+
+
+ 
+
+
+{% endblock %}
